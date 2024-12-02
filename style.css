@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.quiz-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.name-input {
+    margin: 2rem 0;
+}
+
+input[type="text"] {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem 0;
+}
+
+.question {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.option {
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    font-size: 1.1rem;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.option:nth-child(1) { background-color: #ff9f43; }
+.option:nth-child(2) { background-color: #00b894; }
+.option:nth-child(3) { background-color: #0984e3; }
+.option:nth-child(4) { background-color: #6c5ce7; }
+
+.option:hover {
+    transform: scale(1.02);
+}
+
+.option.correct {
+    background-color: #00b894 !important;
+    color: white;
+}
+
+.option.wrong {
+    background-color: #ff7675 !important;
+    color: white;
+}
+
+button {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 1rem 0;
+}
+
+button:hover {
+    background: #34495e;
+}
+
+.message {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    min-height: 2rem;
+    color: #2ecc71;
+}
+
+#score-display {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+#final-score {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin: 2rem 0;
+}
+
+#congratulation-message {
+    font-size: 1.5rem;
+    color: #27ae60;
+    margin: 2rem 0;
+}
+
+.screen {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
